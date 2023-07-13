@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet">
+      <!-- <img id="clds" src="/img/clouds.jpg" alt="clouds"> -->
+    
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather APP</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About this App
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Islamabad</a></li>
+                  <li><a class="dropdown-item" href="#">Lahore</a></li>
+                  <li><a class="dropdown-item" href="#">Hyderabad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Usage Guide</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="city" class="form-control me-2" type="search" placeholder="enter your city name" aria-label="Search">
+              <button class="btn btn-outline-success" id="submit" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+      <br>
+      <br>
+      <h1 id="cityName"></h1>  
+      <br>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div  class="col">
+            <div id="card-1" class="card mb-4 rounded-3">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Tempratures</h4>
+              </div>
+              <br>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light"><span>&#8451;</span></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Temperature is <span id="temp"></span></li>
+                  <li>Min Temperature is <span id="min_temp"></span></li>
+                  <li>Max Temperature is <span id="max_temp"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary"></button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div id="card-2" class="card mb-4 rounded-3 ">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Humidity Info</h4>
+              </div>
+              <br>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light">%</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li id="humdt">Humidity is <span id="humidity"></span></li>
+                  <li>Cloud PCT is <span id="cloud_pct"></span></li>
+                  <br>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary"></button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div id="card-3" class="card mb-4 rounded-3 border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <br>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="wind_degrees2"></span><small class="text-body-secondary fw-light"> km/h </small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Wind Degrees is <span id="wind_degrees"></span></li>
+                  <li>Wind Speed is <span id="wind_speed"></span></li>
+                  <li>Feels like <span id="feels_like"></span></li>
+
+                  <!-- <li>Sunrise is <span id="sunrise"></span></li>
+                  <li>Sunset is <span id="sunset"></span></li> -->
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- <h1 class="display-6 text-center">
+        Weather of other places
+      </h1>
+      <br>
+      <div class="text-center">
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 22%; font-family: Verdana, Geneva, Tahoma, sans-serif;  ">Temperature</th>
+                <th style="width: 22%; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Max Temperature</th>
+                <th style="width: 22%; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Humidity</th>
+                <th style="width: 22%; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Cloud PCT</th>
+                <th style="width: 22%; font-family: Verdana, Geneva, Tahoma, sans-serif; ">Wind Degrees</th>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Sunrise</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">New York</th>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Beijing</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+              </tr>
+            </tbody>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Canberra</th>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Istanbul</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Islamabad</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">New Dehli</th>
+                <td></td>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="server.mjs"></script>
+  </body>
+</html>

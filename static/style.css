@@ -1,0 +1,95 @@
+body {
+  background-image: url(/img/clouds.jpg);
+  background-size: 1900px;
+  background-attachment: fixed;
+}
+
+.navbar navbar-expand-lg bg-body-tertiary {
+  background-color: blueviolet;
+  
+}
+
+.navbar-brand {
+  font-family: 'Ysabeau Infant', sans-serif;
+  
+}
+
+#cityName {
+  justify-content: center;
+  text-align: center;
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 800;
+  font-size: 200 px;
+  
+}
+
+#card-1 {
+  box-shadow: blueviolet -1px -0.5px 12px -5px;
+}
+
+#card-2 {
+  box-shadow: blueviolet 0.5px -0.5px 10px -5px;
+
+}
+#card-3 {
+  box-shadow: blueviolet 1px -0.5px 10px -4px;
+  
+}
+
+#min_temp{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+}
+#max_temp{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+}
+#wind_degrees{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+}
+#wind_degrees2{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 650;
+}
+#humidity2{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 650;
+}
+#humidity{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+}
+#cloud_pct{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+
+}
+#feels_like{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+}
+#temp{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+  
+}
+#temp2{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 650;
+  
+}
+#wind_speed{
+  font-family: 'Ysabeau Infant', sans-serif;
+  font-weight: 500;
+
+}
+
+#city {
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+
+/* .list-unstyled mt-3 mb-4 {
+
+} */
+  
